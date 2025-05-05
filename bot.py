@@ -8,8 +8,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         [InlineKeyboardButton("Start Game", callback_data='start_game')],
         [InlineKeyboardButton("Get My Invite Link", callback_data='invite')]
 ]
-reply_markup = InlineKeyboardMarkup(keyboard)
-await update.message.reply_text("Welcome to the Future X Airdrop!", reply_markup=reply_markup)
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text("Welcome to the Future X Airdrop!", reply_markup=reply_markup)
 
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 app.add_handler(CommandHandler("start", start))
